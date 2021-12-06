@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./index.css">
-    <script type="text/javascript" src="./index.js"></script>
 </head>
 
 <body>
@@ -32,44 +31,7 @@
     </div>
     
     
-    
-    <script>
-        let firstNumberElement = document.getElementById("firstNumber");
-        let secondNumberElement = document.getElementById("secondNumber");
-        let userInputElement = document.getElementById("userInput");
-        let gameResultElement = document.getElementById("gameResult");
-
-        let successMessage = "Congratulations! You got it right.";  
-        let tryAgainMessage = "Please try Again!";
-
-        function restartGame() {
-            let firstRandomNumber = Math.random() * 100;
-            let secondRandomNumber = Math.random() * 100;
-
-            firstNumberElement.textContent = Math.ceil(firstRandomNumber);
-            secondNumberElement.textContent = Math.ceil(secondRandomNumber);
-            gameResultElement.textContent = "";
-            userInputElement.value = "";
-        }
-
-        restartGame();
-
-        function checkResult() {
-            let firstRandomInteger = parseInt(firstNumberElement.textContent);
-            let secondRandomInteger = parseInt(secondNumberElement.textContent);
-            let userEnetredSum = parseInt(userInputElement.value);
-
-            let sumOfTwoRandomInteger = firstRandomInteger + secondRandomInteger;
-
-            if (userEnetredSum === sumOfTwoRandomInteger) {
-                gameResultElement.textContent = successMessage;
-                gameResultElement.style.backgroundColor = "#028a0f";
-            } else {
-                gameResultElement.textContent = tryAgainMessage;
-                gameResultElement.style.backgroundColor = "#1e217c";
-            }
-        })();
-    </script>
+    <script type="text/javascript" src="./index.js"></script>
 </body>
 
 </html>
